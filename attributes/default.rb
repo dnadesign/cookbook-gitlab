@@ -35,12 +35,12 @@ default['gitlab']['username_changing_enabled'] = true
 
 # Set github URL for gitlab
 default['gitlab']['git_url'] = 'git://github.com/gitlabhq/gitlabhq.git'
-default['gitlab']['git_branch'] = '6-9-stable'
+default['gitlab']['git_branch'] = '7-7-stable'
 
 # gitlab-shell attributes
 default['gitlab']['shell']['home'] = node['gitlab']['home'] + '/gitlab-shell'
 default['gitlab']['shell']['git_url'] = 'git://github.com/gitlabhq/gitlab-shell.git'
-default['gitlab']['shell']['git_branch'] = 'v1.9.4'
+default['gitlab']['shell']['git_branch'] = 'v2.4.1'
 
 # Database setup
 default['gitlab']['database']['type'] = 'mysql'
