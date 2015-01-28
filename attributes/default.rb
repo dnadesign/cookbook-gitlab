@@ -59,7 +59,7 @@ default['gitlab']['install_ruby'] = '1.9.3-p484'
 default['gitlab']['install_ruby_path'] = node['gitlab']['home']
 default['gitlab']['cookbook_dependencies'] = %w(
   zlib readline ncurses openssh
-  logrotate redisio::install redisio::enable ruby_build
+  logrotate redisio::install redisio::configure redisio::enable ruby_build
 )
 
 # Required packages for Gitlab
@@ -80,7 +80,7 @@ else
   default['gitlab']['install_ruby'] = 'package'
   default['gitlab']['cookbook_dependencies'] = %w(
     openssh readline zlib ruby_build
-    redisio::install redisio::enable
+    redisio::install redisio::configure redisio::enable
   )
   default['gitlab']['packages'] = %w(
     autoconf binon flex gcc gcc-c++ make m4
