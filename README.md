@@ -82,6 +82,9 @@ Attributes
 * `gitlab['git_branch']`
   - Defaults to stable GitlabHQ branch matching the major version of this cookbook. e.g. 6.1.x => 6-1-stable
 
+* `gitlab['git_action']`
+  - Action to perform on repo, default 'checkout', use 'sync' to update to a new reference.
+
 * `gitlab['packages']`
   - Platform specific OS packages
 

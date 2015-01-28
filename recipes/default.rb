@@ -132,7 +132,7 @@ end
 git node['gitlab']['shell']['home'] do
   repository node['gitlab']['shell']['git_url']
   reference node['gitlab']['shell']['git_branch']
-  action :checkout
+  action node['gitlab']['git_action']
   user node['gitlab']['user']
   group node['gitlab']['group']
 end
@@ -159,7 +159,7 @@ end
 git node['gitlab']['app_home'] do
   repository node['gitlab']['git_url']
   reference node['gitlab']['git_branch']
-  action :checkout
+  action node['gitlab']['shell']['git_action']
   user node['gitlab']['user']
   group node['gitlab']['group']
 end
